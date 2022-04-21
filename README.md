@@ -144,9 +144,10 @@ You can also define your own types of exceptions.
         try:
             myWord = input("Enter a word with five letters: ")
             if (len(myWord) != 5):
-                raise wordLengthError("Word not five letters!")
+                myError = wordLengthError("Word not five letters!")
+                raise myError
         except wordLengthError:
-            print(wordLengthError.message)
+            print(myError.message)
 
 # Resources
 - [Official Python Tutorial - Class Inheritance](https://docs.python.org/3.7/tutorial/classes.html#inheritance)
